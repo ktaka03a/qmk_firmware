@@ -48,10 +48,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       _______,  _______,  _______,  _______,  _______,  _______
     ),
     [2] = LAYOUT(
-        _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  
-        _______,  _______,  _______,  S(KC_RCBR),  S(KC_BSLS),_______, _______,  _______,  _______,  _______,  _______,  _______,  
+        _______,  KC_F1,    KC_F2,  KC_F3,  KC_F4,  KC_F5,  KC_F6,  KC_F7,  KC_F8,  KC_F9,  KC_F10,  _______,  
+        _______,  _______,  _______,  S(KC_RBRC),  S(KC_BSLS),_______, _______,  _______,  _______,  _______,  _______,  _______,  
         _______,  S(KC_1),  KC_LBRC,  S(KC_3),  S(KC_4),  S(KC_5),  _______,  KC_EQL,   S(KC_6),  S(KC_QUOT),_______,  _______,
-        _______,  _______,  KC_RCBR,  KC_BSLS,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  
+        _______,  _______,  KC_RBRC,  KC_BSLS,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  _______,  
                                       _______,  _______,  _______,  _______,  _______,  _______
     ),
     [3] = LAYOUT(
@@ -70,13 +70,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) { /* First encoder */
-        if (clockwise) {
-            tap_code_delay(KC_1, 10);
-        } else {
-            tap_code_delay(KC_0, 10);
-        }
-    }
-    return false;
-}
+// bool encoder_update_user(uint8_t index, bool clockwise) {
+//     if (index == 0) { /* First encoder */
+//         if (clockwise) {
+//             tap_code_delay(KC_1, 10);
+//         } else {
+//             tap_code_delay(KC_0, 10);
+//         }
+//     }
+//     return false;
+// }
